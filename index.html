@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+       <meta charset="UTF-8">
+       <title>Часы</title>
+    </head>
+    <body>
+        <main>
+            <h1>Засекатор времени</h1>
+            <input type="number" id = 'tinp' value="60" min = "2">
+            <p id = 'timer'>Здесь появится отсчет...</p>
+            <div class="buttons">
+             <button onclick="Start()" class="Start">Начать отсчет</button>
+             <button onclick="OtherStart()" class="OtherStart">Начать отсчет с конца</button>
+             <button onclick = "Pause()" class = "pause">Пауза</button>
+             <button onclick = "Stop()" class = "Stop">Сброс</button>
+            </div>
+        </main>
+        <style>
+            body{
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background-color: antiquewhite;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                color: black;
+                flex-direction: column;
+                gap: 3px;
+            }
+            main{
+                background-color: cadetblue;
+                width: 700px;
+                height: 400px;
+                text-align: center;
+                margin: 45px;
+                border-radius: 2%;
+                box-shadow: 0 0 10px 25px rgba(0, 0, 0, 0.1);
+            }
+            h1{
+                font-size: 40px;
+                color: black;
+            }
+            p{
+                opacity: 0.7;
+                color: black;
+                font-size: 20px;
+                font-variant-numeric: tabular-nums;
+            }
+            .buttons{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap : 5px;
+            }
+            .Start, .pause, .Stop, .OtherStart{
+                width: 120px;
+                height: 35px;
+                padding: 10px,20px;
+                border-radius: 10%;
+                color: black;
+                background-color: azure;
+                box-shadow: 0 0 10px 25px rgba(0, 0, 0, 0.05);
+            }
+            input{
+                color: black;
+                background-color: aquamarine;
+                box-shadow: 0 0 10px 25px rgba(0, 0, 0, 0.08);
+                border-radius: 10%;
+            }
+        </style>
+        <script src="timers.js"></script>
+    </body>
+</html>
